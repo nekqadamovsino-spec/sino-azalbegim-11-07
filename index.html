@@ -1,1 +1,119 @@
-<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Сино & Азалбегим — свадебное приглашение</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head><body><nav class="nav"><a href="#invite">Приглашение</a><a href="#date">Дата</a><a href="#place">Место</a><a href="#gallery">Галерея</a><a href="#rsvp">Подтвердить</a></nav><header class="hero"><div class="hero-bg"></div><div class="hero-overlay"></div><div class="hero-content reveal"><div class="monogram">S <span>&</span> A</div><p class="overline">Мы женимся</p><h1>Сино<br><span>&</span><br>Азалбегим</h1><p class="date-line">11 июля 2026 · 14:00</p><a href="#invite" class="scroll">Листайте вниз</a></div></header><main><section id="invite" class="section invite"><div class="ornament">❦</div><h2 class="script">Дорогие наши!</h2><p>С большой радостью приглашаем вас разделить с нами день, с которого начнётся наша семейная история.</p><p>Для нас будет особенно ценно видеть рядом самых близких людей, услышать ваши тёплые слова и провести этот вечер в атмосфере любви, радости и красивых воспоминаний.</p><p class="signature">С любовью, Сино и Азалбегим</p></section><section id="date" class="section date-section"><p class="overline dark">До нашей свадьбы осталось</p><div class="countdown"><div><span id="days">0</span><small>дней</small></div><div><span id="hours">0</span><small>часов</small></div><div><span id="minutes">0</span><small>минут</small></div><div><span id="seconds">0</span><small>секунд</small></div></div><div class="date-card"><div><span class="big">11</span><span>июля</span></div><div><span class="big">2026</span><span>начало в 14:00</span></div></div></section><section class="section story"><div class="story-text reveal"><p class="overline dark">Наша история</p><h2>Один день, который хочется запомнить навсегда</h2><p>Мы хотим, чтобы этот праздник был не просто торжеством, а тёплым вечером с людьми, которые дороги нашему сердцу.</p></div><div class="story-grid"><img src="images/gallery1.jpg" alt="Сино и Азалбегим у озера"><img src="images/gallery2.jpg" alt="Сино и Азалбегим в лодке"></div></section><section id="place" class="section place"><p class="overline dark">Место проведения</p><h2>Банкетный зал «Гранд»</h2><div class="place-card"><img src="images/venue.jpg" alt="Банкетный зал Гранд"><div class="place-info"><p>Тихорецкий бульвар, 1 стр. 19</p><p>Москва</p><a class="button" target="_blank" rel="noopener" href="https://yandex.ru/maps/?text=Тихорецкий%20бульвар%201%20стр%2019%20банкетный%20зал%20Гранд">Открыть карту</a></div></div></section><section id="gallery" class="section gallery-section"><p class="overline dark">Галерея</p><h2>Наши моменты</h2><div class="gallery"><img src="images/gallery3.jpg"><img src="images/gallery4.jpg"><img src="images/gallery5.jpg"><img src="images/gallery6.jpg"><img src="images/gallery7.jpg"><img src="images/gallery8.jpg"><img src="images/gallery9.jpg"><img src="images/gallery1.jpg"></div></section><section id="rsvp" class="section rsvp"><div class="ornament">❦</div><h2>Подтвердите присутствие</h2><p>Пожалуйста, сообщите нам заранее, сможете ли вы быть с нами в этот день.</p><form onsubmit="sendRSVP(event)"><input id="guestName" type="text" placeholder="Ваше имя" required><select id="guestAnswer" required><option value="">Выберите ответ</option><option>Буду присутствовать</option><option>К сожалению, не смогу</option></select><button type="submit">Подтвердить</button></form><p id="formResult" class="form-result"></p></section></main><footer><div class="monogram small">S <span>&</span> A</div><p>11.07.2026</p></footer><script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Сино & Азалбегим — свадебное приглашение</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a href="#invite">Приглашение</a>
+    <a href="#date">Дата</a>
+    <a href="#place">Место</a>
+    <a href="#gallery">Галерея</a>
+    <a href="#rsvp">Подтвердить</a>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="monogram">S <span>&</span> A</div>
+      <p class="overline">Мы женимся</p>
+      <h1>Сино<br><span>&</span><br>Азалбегим</h1>
+      <p class="date-line">11 июля 2026 · 14:00</p>
+      <a href="#invite" class="scroll">Листайте вниз</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="invite" class="section invite">
+      <div class="ornament">❦</div>
+      <h2 class="script">Дорогие наши!</h2>
+      <p>С большой радостью приглашаем вас разделить с нами день, с которого начнётся наша семейная история.</p>
+      <p>Для нас будет особенно ценно видеть рядом самых близких людей, услышать ваши тёплые слова и провести этот вечер в атмосфере любви, радости и красивых воспоминаний.</p>
+      <p class="signature">С любовью, Сино и Азалбегим</p>
+    </section>
+
+    <section id="date" class="section date-section">
+      <p class="overline dark">До нашей свадьбы осталось</p>
+      <div class="countdown">
+        <div><span id="days">0</span><small>дней</small></div>
+        <div><span id="hours">0</span><small>часов</small></div>
+        <div><span id="minutes">0</span><small>минут</small></div>
+        <div><span id="seconds">0</span><small>секунд</small></div>
+      </div>
+      <div class="date-card">
+        <div><span class="big">11</span><span>июля</span></div>
+        <div><span class="big">2026</span><span>начало в 14:00</span></div>
+      </div>
+    </section>
+
+    <section class="section story">
+      <div class="story-text">
+        <p class="overline dark">Наша история</p>
+        <h2>Один день, который хочется запомнить навсегда</h2>
+        <p>Мы хотим, чтобы этот праздник был не просто торжеством, а тёплым вечером с людьми, которые дороги нашему сердцу.</p>
+      </div>
+      <div class="story-grid">
+        <img src="gallery1.jpg" alt="Сино и Азалбегим у озера" />
+        <img src="gallery2.jpg" alt="Сино и Азалбегим в лодке" />
+      </div>
+    </section>
+
+    <section id="place" class="section place">
+      <p class="overline dark">Место проведения</p>
+      <h2>Банкетный зал «Гранд»</h2>
+      <div class="place-card">
+        <img src="venue.jpg" alt="Банкетный зал Гранд" />
+        <div class="place-info">
+          <p>Тихорецкий бульвар, 1 стр. 19</p>
+          <p>Москва</p>
+          <a class="button" target="_blank" rel="noopener" href="https://yandex.ru/maps/?text=Тихорецкий%20бульвар%201%20стр%2019%20банкетный%20зал%20Гранд">Открыть карту</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section gallery-section">
+      <p class="overline dark">Галерея</p>
+      <h2>Наши моменты</h2>
+      <div class="gallery">
+        <img src="gallery3.jpg" alt="Фото Сино и Азалбегим" />
+        <img src="gallery4.jpg" alt="Фото Азалбегим в лодке" />
+        <img src="gallery5.jpg" alt="Фото с лошадьми" />
+        <img src="gallery6.jpg" alt="Фото на закате" />
+        <img src="gallery7.jpg" alt="Лебеди" />
+        <img src="gallery8.jpg" alt="Азалбегим у озера" />
+        <img src="gallery9.jpg" alt="Букет и книга" />
+        <img src="gallery1.jpg" alt="Сино и Азалбегим у озера" />
+      </div>
+    </section>
+
+    <section id="rsvp" class="section rsvp">
+      <div class="ornament">❦</div>
+      <h2>Подтвердите присутствие</h2>
+      <p>Пожалуйста, сообщите нам заранее, сможете ли вы быть с нами в этот день.</p>
+      <form onsubmit="sendRSVP(event)">
+        <input id="guestName" type="text" placeholder="Ваше имя" required>
+        <select id="guestAnswer" required>
+          <option value="">Выберите ответ</option>
+          <option>Буду присутствовать</option>
+          <option>К сожалению, не смогу</option>
+        </select>
+        <button type="submit">Подтвердить</button>
+      </form>
+      <p id="formResult" class="form-result"></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="monogram small">S <span>&</span> A</div>
+    <p>11.07.2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
