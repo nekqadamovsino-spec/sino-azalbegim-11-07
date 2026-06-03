@@ -1,5 +1,5 @@
 const target = new Date("2026-07-11T14:00:00+03:00");
-const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwKGmO7iJlT8Jqk8yTN2RLiGBPi5AWHBh-AUbCYpx9gM3J5gRe11lrvpHILigoLiKsdJg/exec";
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzxZH5yFs_Zr5q64BbmvVBFMjBonEk22vS7KRvC-vrkeMatZg1Fe2237GFjJwXW3Uk5LQ/exec";
 
 function pad(n){ return String(n).padStart(2,"0"); }
 
@@ -24,14 +24,14 @@ function sendRSVP(event){
 
   result.textContent = "Отправляем...";
 
-  fetch(WEB_APP_URL, {
-    method: "POST",
-    mode: "no-cors",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({ name, answer })
-  });
+ fetch(WEB_APP_URL, {
+  method: "POST",
+  mode: "no-cors",
+  body: new URLSearchParams({
+    name: name,
+    answer: answer
+  })
+});
 
   result.textContent = name + ", спасибо! Ваш ответ отправлен.";
   event.target.reset();
